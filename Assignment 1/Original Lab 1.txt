@@ -1,0 +1,188 @@
+Skip to content
+
+
+Features 
+Business 
+Explore 
+Marketplace 
+Pricing 
+This repository
+ 
+Sign in or Sign up 
+
+
+ Watch 
+0 
+ Star 
+0 
+ Fork 
+0 
+
+marycampbell/Lab-1 
+ Code 
+ Issues 0 
+ Pull requests 0 
+ Projects 0 
+ Insights 
+Branch: master 
+Find file 
+Copy path 
+Lab-1/lab 1.cs 
+620d749 on Feb 5 
+ marycampbell Add files via upload 
+1 contributor 
+ 
+Raw
+Blame
+History
+   
+68 lines (56 sloc) 2.32 KB 
+
+using System;
+
+using System.Collections.Generic;
+
+using System.Linq;
+
+using System.Text;
+
+using System.Threading.Tasks;
+
+
+
+namespace ConsoleApp1
+
+{
+
+    class Program
+
+    {
+
+        static void Main(string[] args)
+
+        {
+
+            string firstName;
+
+            string middleInitial;
+
+            string lastName;
+
+            string fullName;
+
+            int age;
+
+            int heightFeet;
+
+            bool isCitizen;
+
+            bool canVote;
+
+            double heightInches;
+
+            double heightCM;
+
+
+
+            // Get first, middle and last name 
+
+            System.Console.Write("What is your first name? ");
+
+            firstName = System.Console.ReadLine();
+
+            System.Console.Write("What is your middle initial? ");
+
+            middleInitial = System.Console.ReadLine();
+
+            System.Console.Write("What is your last name? ");
+
+            lastName = System.Console.ReadLine();
+
+
+
+            fullName = firstName + " " + middleInitial + ". " + lastName;
+
+
+
+            // Get age
+
+            System.Console.Write("What is your age? ");
+
+            age = int.Parse(System.Console.ReadLine());
+
+
+
+            // Get height
+
+            System.Console.Write("What is your height in feet? (4, 5, or 6) ");
+
+            heightFeet = int.Parse(System.Console.ReadLine());
+
+            System.Console.Write("How many inches beyond your base height? ");
+
+            heightInches = double.Parse(System.Console.ReadLine());
+
+            heightInches = heightInches + (heightFeet * 12);
+
+            heightCM = heightInches * 2.54;
+
+
+
+            //Find out citizenship 
+
+            System.Console.Write("Are you a citizen of the United States? (true or false) ");
+
+            isCitizen = bool.Parse(System.Console.ReadLine());
+
+
+
+            //Determine if user can vote
+
+            if ((age >= 18) && (isCitizen))
+
+                canVote = true;
+
+            else
+
+                canVote = false;
+
+
+
+            //Output name, height and voting status
+
+            if (canVote == true)
+
+                System.Console.WriteLine("Congratulations {0}, with a height of {1} CM, you can vote!", fullName, heightCM);
+
+            else
+
+                System.Console.WriteLine("Sorry {0}, with a height of {1} CM, you can not vote.", fullName, heightCM);
+
+
+
+            System.Console.ReadLine();
+
+
+
+
+
+        }
+
+    }
+
+}
+© 2018 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+ 
+Contact GitHub
+API
+Training
+Shop
+Blog
+About
+
+Press h to open a hovercard with more details. 
